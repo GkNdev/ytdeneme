@@ -2,7 +2,7 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/stream/:videoId.m3u8", async (req, res) => {
   const videoId = req.params.videoId;
